@@ -1,5 +1,8 @@
 package ua.goit;
 
+/**Module 5 Tasks 7
+ * */
+
 public class Engine {
     private int power;
 
