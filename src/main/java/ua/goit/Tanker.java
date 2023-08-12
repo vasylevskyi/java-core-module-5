@@ -1,5 +1,8 @@
 package ua.goit;
 
+
+/**Module 5 Task 10
+ * */
 class Tanker {
 
     private String serialNumber;
