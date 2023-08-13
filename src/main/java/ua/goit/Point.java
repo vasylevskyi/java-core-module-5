@@ -2,7 +2,7 @@ package ua.goit;
 
 import java.util.Objects;
 
-/**Module 5 Tasks 19
+/**Module 5 Tasks 19-
  * */
 
 public class Point {
@@ -45,6 +45,7 @@ public class Point {
         return Objects.hash(x, y, z);
     }
 
+
     public static void main(String[] args) {
         Point p1 = new Point();
         p1.setX(1);
@@ -61,8 +62,62 @@ public class Point {
         p3.setY(2);
         p3.setZ(3);
 
-        System.out.println(p1.equals(p2)); //Should be true
+/*        System.out.println(p1.equals(p2)); //Should be true
+        System.out.println(p1.equals(p3)); //Should be false*/
+
+/*        System.out.println(p1.equals(p2)); //Should be true
         System.out.println(p1.equals(p3)); //Should be false
+        System.out.println(p1.hashCode() == p2.hashCode()); //Should be true
+        System.out.println(p1.hashCode() == p3.hashCode()); //Can be true or false*/
+
+        StarTrack track1 = new StarTrack();
+        track1.setStart(p1);
+        track1.setFinish(p2);
+
+        StarTrack track2 = new StarTrack();
+        track2.setStart(p1);
+        track2.setFinish(p2);
+
+        StarTrack track3 = new StarTrack();
+        track3.setStart(p1);
+        track3.setFinish(p3);
+
+        System.out.println(track1.equals(track2)); //Should be true
+        System.out.println(track1.equals(track3)); //Should be false
+        System.out.println(track1.hashCode() == track2.hashCode()); //Should be true
     }
 }
 
+class StarTrack {
+    private Point start;
+
+    public Point getStart() {
+        return start;
+    }
+
+    public void setStart(Point start) {
+        this.start = start;
+    }
+
+    private Point finish;
+
+    public Point getFinish() {
+        return finish;
+    }
+
+    public void setFinish(Point finish) {
+        this.finish = finish;
+    }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        StarTrack that = (StarTrack) o;
+        return Objects.equals(start, that.start) && Objects.equals(finish, that.finish);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(start, finish);
+    }
+}
