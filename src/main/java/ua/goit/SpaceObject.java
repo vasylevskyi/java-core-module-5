@@ -1,5 +1,8 @@
 package ua.goit;
 
+/**Module 5 Tasks 25
+ * */
+
 public abstract class SpaceObject {
 
 }

@@ -1,5 +1,8 @@
 package ua.goit;
 
+/**Module 5 Tasks 24
+ * */
+
 public class Stars {
     private int count;
 
