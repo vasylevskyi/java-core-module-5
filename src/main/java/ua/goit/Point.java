@@ -2,7 +2,7 @@ package ua.goit;
 
 import java.util.Objects;
 
-/**Module 5 Tasks 19-
+/**Module 5 Tasks 19-22
  * */
 
 public class Point {
