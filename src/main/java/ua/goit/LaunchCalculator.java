@@ -3,6 +3,7 @@ package ua.goit;
 /**Module 5 Tasks 13
  * */
 
+/*
 class LaunchCalculator {
     public int calculateTotalPrice(Spaceport spaceport, int passengerCount) {
         return spaceport.calculateTotalPrice(passengerCount);
@@ -47,4 +48,4 @@ class SunHeaven extends Spaceport {
     public int calculateTotalPrice(int passengerCount) {
         return 2000;
     }
-}
+}*/
